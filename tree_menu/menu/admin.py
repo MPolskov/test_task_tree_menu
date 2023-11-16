@@ -1,3 +1,33 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Menu, MenuItem
+
+
+@admin.register(Menu)
+class MenuAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'slug'
+    )
+
+
+@admin.register(MenuItem)
+class MenuItemAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'slug',
+        'parent'
+    )
+    fieldsets = [
+        (
+            'Add new',
+            {
+                'fields': (
+                    'title',
+                    'slug',
+                    'menu',
+                    'parent'
+                )
+            }
+        )
+    ]

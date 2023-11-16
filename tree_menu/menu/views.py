@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def index(request):
+    """Функция представления главной страницы"""
+    template = 'menu/index.html'
+    return render(request, template)
