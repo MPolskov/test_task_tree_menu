@@ -1,0 +1,11 @@
+<ul>
+    {% for item in items %}
+        <li>
+            <p>{{item.title}}</p>
+        </li>
+        {% if item.children %}
+            {% include 'menu/menu_item.html' with items=item.children %}
+        {% endif %}
+
+    {% endfor %}
+</ul>

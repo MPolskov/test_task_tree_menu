@@ -6,7 +6,7 @@ app_name = 'menu'
 
 urlpatterns = [
     path(
-        'menu/',
+        'menu/<slug:slug>/',
         views.MenuView.as_view(),
         name='menu'
     ),
