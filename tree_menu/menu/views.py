@@ -1,7 +1,6 @@
-from django.shortcuts import render
+from django.views.generic.base import TemplateView
 
 
-def index(request):
-    """Функция представления главной страницы"""
-    template = 'menu/index.html'
-    return render(request, template)
+class MenuView(TemplateView):
+    """Класс представления страницы меню"""
+    template_name = 'menu/index.html'
