@@ -1,9 +1,10 @@
 <ul>
     {% for item in items %}
         <li>
+            {% url 'menu:index' item.slug as current_url %}
             <a 
-            {% if current_slug  == item.slug %}
-                style="color:red" 
+            {% if context.request.path == current_url %}
+                style="color:red"
             {% endif %}
             href="{% url 'menu:index' item.slug %}">{{item.title}}</a>
         </li>

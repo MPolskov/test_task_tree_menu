@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Menu(models.Model):
+    """Модель Меню."""
     title = models.CharField(
         max_length=200,
         verbose_name='Название меню'
@@ -21,6 +22,7 @@ class Menu(models.Model):
 
 
 class MenuItem(models.Model):
+    """Модель пункта меню."""
     title = models.CharField(
         max_length=200,
         verbose_name='Название пункта'

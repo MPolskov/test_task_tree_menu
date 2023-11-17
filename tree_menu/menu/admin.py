@@ -20,7 +20,7 @@ class MenuItemAdmin(admin.ModelAdmin):
     )
     fieldsets = [
         (
-            'Add new',
+            'Добавить',
             {
                 'fields': (
                     'title',
