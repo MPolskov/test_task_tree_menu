@@ -17,7 +17,8 @@ def draw_menu(context, menu):
         if item['id'] in selected_items_list:
             item['children'] = get_children(menu_items, selected_items_list, item['id'])
     result = {
-        'items': base_items
+        'items': base_items,
+        'current_slug': selected_item.slug
     }
     return result
 

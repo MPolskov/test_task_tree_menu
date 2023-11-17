@@ -1,7 +1,11 @@
 <ul>
     {% for item in items %}
         <li>
-            <p>{{item.title}}</p>
+            <a 
+            {% if current_slug  == item.slug %}
+                style="color:red" 
+            {% endif %}
+            href="{% url 'menu:index' item.slug %}">{{item.title}}</a>
         </li>
         {% if item.children %}
             {% include 'menu/menu_item.html' with items=item.children %}

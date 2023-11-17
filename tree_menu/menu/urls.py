@@ -8,6 +8,6 @@ urlpatterns = [
     path(
         'menu/<slug:slug>/',
         views.MenuView.as_view(),
-        name='menu'
+        name='index'
     ),
 ]
